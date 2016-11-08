@@ -1,0 +1,8 @@
+<LOG_ROOT>/logs/mosca.log {
+        size 1k
+  	copytruncate
+        create 700 root root
+	dateext
+	rotate 4
+	compress
+}

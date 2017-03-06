@@ -14,7 +14,6 @@ docker run \
        -v /etc/localtime:/etc/localtime:ro \
        -v ${PWD}/db:/db \
        -v ${PWD}/logs/mosca.log:/mosca.log \
-       -p ${LISTEN_PORT}:${LISTEN_PORT} \
        -h mosca \
        services/mosca
 

@@ -19,7 +19,7 @@ docker run \
 
 for zone in "external" "trusted" ; do
     ##
-    # Consider removing forwarding rule in ./stop.sh script
+    # Note that removal of port forwarding (firewalld) rule is in the ./stop.sh script
     ##
     echo "Current Port Forwarding rules for the '${zone}' zone. Mosca cares about port ${LISTEN_PORT}"
     firewall-cmd --list-forward-ports --zone ${zone}

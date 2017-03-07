@@ -17,6 +17,8 @@ docker run \
        -h mosca \
        services/mosca
 
+firewall-cmd --zone=trusted --add-masquerade
+
 for zone in "external" "trusted" ; do
     ##
     # Note that removal of port forwarding (firewalld) rule is in the ./stop.sh script

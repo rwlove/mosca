@@ -16,4 +16,6 @@ for zone in "external" "trusted" ; do
     fi
 done
 
+firewall-cmd --zone=trusted --remove-masquerade
+
 docker stop `docker ps | grep services/mosca | cut -d ' ' -f 1`

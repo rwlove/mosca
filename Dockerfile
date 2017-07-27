@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.04
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
 apt-get -y dist-upgrade
@@ -14,7 +14,7 @@ RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN npm install mosca pino -g
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
-libzmq-dev
+libzmq3-dev
 
 EXPOSE 1883 80
 

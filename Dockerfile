@@ -1,4 +1,4 @@
-FROM ubuntu:17.04
+FROM ubuntu:17.10
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
 apt-get -y dist-upgrade && \
@@ -6,8 +6,6 @@ apt-get -y install \
 npm \
 inetutils-ping \
 libzmq3-dev
-
-RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN npm install mosca pino -g
 

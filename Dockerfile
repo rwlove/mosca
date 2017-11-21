@@ -13,8 +13,8 @@ RUN npm install mosca pino -g
 
 EXPOSE 1883 80
 
-COPY scripts/mosca_entrypoint.sh /usr/bin/mosca_entrypoint.sh
-CMD ["/usr/bin/mosca_entrypoint.sh"]
+COPY scripts/mosca_entrypoint.sh /mosca_entrypoint.sh
+CMD ["/mosca_entrypoint.sh"]
 
 #####
 # Clean up
